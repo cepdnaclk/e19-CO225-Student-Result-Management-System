@@ -20,7 +20,7 @@ This is a sample image, to show how to add images to your page. To learn more op
  -->
 
 ## Team
--  E/19/105, FAHMAN M.H.M., [email](mailto: e19105@eng.pdn.ac.lk)
+-  E/19/105, FAHMAN M.H.M., e19105@eng.pdn.ac.lk
 -  eNumber, Name, [email](mailto:name@email.com)
 -  eNumber, Name, [email](mailto:name@email.com)
 
