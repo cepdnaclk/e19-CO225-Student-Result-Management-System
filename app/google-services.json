@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "327142981846",
+    "project_id": "student-result-system-co225",
+    "storage_bucket": "student-result-system-co225.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:327142981846:android:9b69ea611f6927a0da4977",
+        "android_client_info": {
+          "package_name": "com.example.student_result_management_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "327142981846-1eoiqelavccb0lguv1v8t5dpum2brlll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEvJMgD8c0XX7E6xtVTqGZWW7G4va--00"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "327142981846-1eoiqelavccb0lguv1v8t5dpum2brlll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
