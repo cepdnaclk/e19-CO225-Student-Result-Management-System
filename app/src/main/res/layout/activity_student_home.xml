@@ -4,11 +4,285 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".StudentHomeActivity">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/HeaderLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Student Home"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/rounded_bordered_header"
+        android:paddingVertical="6dp"
+        android:paddingHorizontal="5dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SRMS"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:textColor="#333333"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="&lt;Student&gt;"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/student"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/baseline_person_24"
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/h_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/red"
+        android:layout_below="@+id/HeaderLayout"
+        android:layout_marginTop="2dp"
+        android:layout_marginHorizontal="15dp"/>
+
+    <GridLayout
+        android:id="@+id/gridBody"
+        android:layout_below="@+id/h_ruler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:columnCount="2">
+
+        <!-- Profile -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/profileButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/profile" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profileButton"
+                android:layout_centerHorizontal="true"
+                android:textSize="22dp"
+                android:text="Profile"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Result -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/grid">
+
+            <ImageButton
+                android:id="@+id/resultButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/result" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/resultButton"
+                android:layout_centerHorizontal="true"
+                android:text="Result"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Quiz -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/quizButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/quiz" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/quizButton"
+                android:layout_centerHorizontal="true"
+                android:text="Quiz"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Project -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/projectButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/project" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/projectButton"
+                android:layout_centerHorizontal="true"
+                android:text="Project"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Assignment -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/assignmentButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/assignment" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/assignmentButton"
+                android:layout_centerHorizontal="true"
+                android:text="Assignment"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Notice -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/noticeButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/notice" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/noticeButton"
+                android:layout_centerHorizontal="true"
+                android:text="Notice"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!-- Calendar -->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/calendarButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/calender" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calendarButton"
+                android:layout_centerHorizontal="true"
+                android:text="Calendar"
+                android:textSize="22dp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+    </GridLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/gridBody">
+        <LinearLayout
+            android:id="@+id/FooterLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="You are logged in as "/>
+
+            <TextView
+                android:id="@+id/regNum"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tvLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(log-out)"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
