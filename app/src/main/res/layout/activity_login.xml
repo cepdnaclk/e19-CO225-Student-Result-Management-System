@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brown"
+    android:background="@color/blue"
     tools:context=".loginActivity">
 
 
@@ -54,7 +54,7 @@
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
         android:layout_marginVertical="20dp"
-        android:backgroundTint="#429A31"
+        android:backgroundTint="#17E9E1"
         android:text="Log in"
         android:textSize="24sp"
         android:visibility="visible"/>
@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/signup_prompt"
             android:text="Don't have an account?"
-            android:textColor="@color/lightYellow"
+            android:textColor="@color/black"
             android:layout_centerHorizontal="true"/>
 
         <TextView
