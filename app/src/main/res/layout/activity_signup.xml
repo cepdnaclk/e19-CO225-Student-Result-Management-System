@@ -4,14 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/brown"
+    android:background="@color/blue"
     tools:context=".SignupActivity">
     
     <ImageButton
         android:id="@+id/backnav"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_back" />
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:src="@drawable/ic_back"
+        android:background="@drawable/rounded_border"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp" />
 
     <TextView
         android:id="@+id/tvTitle"
@@ -77,7 +80,7 @@
         android:layout_below="@+id/ConfirmPassword"
         android:layout_centerHorizontal="true"
         android:layout_marginVertical="20dp"
-        android:backgroundTint="#429A31"
+        android:backgroundTint="#17E9E1"
         android:text="Sign up"
         android:textSize="24sp"
         android:visibility="visible"/>
