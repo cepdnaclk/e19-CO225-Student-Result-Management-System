@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="profile">My Profile</string>
+    <string name="inquiry">Student Inquiries</string>
+    <string name="result">Upload Results</string>
+    <string name="my_app">ACHIEVO</string>
+    <string-array name="batch_array">
+        <item>Select batch</item>
+        <item>E/19</item>
+        <item>E/18</item>
+        <item>E/17</item>
+    </string-array>
+
+</resources>
