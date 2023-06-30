@@ -17,22 +17,58 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         setContentView(R.layout.activity_results);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        // Batch Spinner
         Spinner batchSpinner = findViewById(R.id.batchSpinner);
         batchSpinner.setOnItemSelectedListener(this);
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+        ArrayAdapter<CharSequence> batchAdapter = ArrayAdapter.createFromResource(
                 this,
                 R.array.batch_array,
                 android.R.layout.simple_spinner_item
         );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        batchSpinner.setAdapter(adapter);
+        batchAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        batchSpinner.setAdapter(batchAdapter);
+
+        // Course Spinner
+        Spinner courseSpinner = findViewById(R.id.courseSpinner);
+        courseSpinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter<CharSequence> courseAdapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.course_array,
+                android.R.layout.simple_spinner_item
+        );
+        courseAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        courseSpinner.setAdapter(courseAdapter);
+
+        // Semester Spinner
+        Spinner semesterSpinner = findViewById(R.id.semesterSpinner);
+        semesterSpinner.setOnItemSelectedListener(this);
+
+        ArrayAdapter<CharSequence> semesterAdapter = ArrayAdapter.createFromResource(
+                this,
+                R.array.semester_array,
+                android.R.layout.simple_spinner_item
+        );
+        semesterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        semesterSpinner.setAdapter(semesterAdapter);
 
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String selectedBatch = parent.getItemAtPosition(position).toString();
-        Toast.makeText(this, "Selected Batch: " + selectedBatch, Toast.LENGTH_SHORT).show();
+        int spinnerId = parent.getId();
+        String selectedItem = parent.getItemAtPosition(position).toString();
+        String message = "";
+
+        if (spinnerId == R.id.batchSpinner) {
+            message = "Selected Batch: " + selectedItem;
+        } else if (spinnerId == R.id.courseSpinner) {
+            message = "Selected Course: " + selectedItem;
+        } else if (spinnerId == R.id.semesterSpinner) {
+            message = "Selected Semester: " + selectedItem;
+        }
+
+        Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
     }
 
     @Override

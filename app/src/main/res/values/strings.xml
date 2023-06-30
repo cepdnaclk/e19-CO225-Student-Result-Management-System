@@ -7,10 +7,19 @@
     <string name="result">Upload Results</string>
     <string name="my_app">ACHIEVO</string>
     <string-array name="batch_array">
-        <item>Select batch</item>
-        <item>E/19</item>
-        <item>E/18</item>
-        <item>E/17</item>
+        <item>E 19</item>
+        <item>E 18</item>
+        <item>E 17</item>
+    </string-array>
+
+    <string-array name="course_array">
+        <item>CO 225</item>
+        <item>CO 224</item>
+    </string-array>
+
+    <string-array name="semester_array">
+        <item>1st semester</item>
+        <item>2nd semester</item>
     </string-array>
 
 </resources>

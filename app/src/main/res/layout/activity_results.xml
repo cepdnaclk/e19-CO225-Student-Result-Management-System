@@ -7,18 +7,67 @@
     tools:context=".ResultsActivity">
 
     <LinearLayout
+        android:layout_marginLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Result Management System"
+            android:fontFamily="@font/outfitregular"
+            android:textSize="28dp"
+            android:layout_gravity="start"
+            android:layout_marginVertical="25dp"
+            android:textColor="@color/dark_midnight_blue">
+
+        </TextView>
+
+        <Spinner
+            android:id="@+id/courseSpinner"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/dropdown_background"
+            android:spinnerMode="dropdown"
+            android:entries="@array/course_array" />
 
         <Spinner
             android:id="@+id/batchSpinner"
-            android:layout_width="200dp"
+            android:layout_width="150dp"
             android:layout_height="40dp"
+            android:layout_marginVertical="15dp"
             android:background="@drawable/dropdown_background"
             android:spinnerMode="dropdown"
             android:entries="@array/batch_array" />
+
+
+
+        <Spinner
+            android:id="@+id/semesterSpinner"
+            android:layout_width="220dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="15dp"
+            android:background="@drawable/dropdown_background"
+            android:spinnerMode="dropdown"
+            android:entries="@array/semester_array" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:text="> Upload Results"
+            android:textSize="15dp"
+            android:fontFamily="@font/outfitregular"
+            android:textColor="@color/dark_midnight_blue">
+
+        </TextView>
+
 
     </LinearLayout>
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/inquiry_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:elevation="10dp"
+        android:onClick="onInquiriesClicked"
+        app:cardBackgroundColor="@color/dodger_blue"
+        app:cardCornerRadius="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/inquiryIcon"
+                android:layout_width="86dp"
+                android:layout_height="86dp"
+                android:layout_marginEnd="10dp"
+                android:padding="20dp"
+                android:src="@drawable/ic_baseline_mail_outline_24"
+                app:tint="@color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oufitbold"
+                    android:gravity="center_vertical"
+                    android:text="E/19/253 Perera K.M."
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfitregular"
+                    android:gravity="center_vertical"
+                    android:text="Request for Exam Result Clarification"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfitlight"
+                    android:gravity="center_vertical"
+                    android:text="Dear sir, Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla Bla bla bla"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
