@@ -8,6 +8,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.Toast;
 
 public class ResultsActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -53,7 +62,20 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         semesterAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         semesterSpinner.setAdapter(semesterAdapter);
 
+        // Upload Results CardView
+        View uploadResultsCardView = findViewById(R.id.upload);
+        uploadResultsCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openFileUploadActivity();
+            }
+        });
+
+
     }
+
+
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         int spinnerId = parent.getId();
@@ -74,5 +96,10 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
         // Do nothing
+    }
+
+    private void openFileUploadActivity() {
+        Intent intent = new Intent(this, FileUploadActivity.class);
+        startActivity(intent);
     }
 }

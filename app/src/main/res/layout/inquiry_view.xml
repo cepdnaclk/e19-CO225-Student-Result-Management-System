@@ -10,10 +10,8 @@
         android:layout_height="80dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="5dp"
-        android:clickable="true"
-        android:focusable="true"
+
         android:elevation="10dp"
-        android:onClick="onInquiriesClicked"
         app:cardBackgroundColor="@color/dodger_blue"
         app:cardCornerRadius="15dp">
 
