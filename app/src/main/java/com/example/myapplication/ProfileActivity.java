@@ -28,6 +28,7 @@ public class ProfileActivity extends AppCompatActivity {
         TextView ccCourse = findViewById(R.id.yourCourse);
         TextView ccQualifications = findViewById(R.id.profileQualifications);
         CardView editButton = findViewById(R.id.editButton);
+        CardView changeRole = findViewById(R.id.changeRole);
 
         // Get a reference to the root node of the database
         DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
@@ -62,6 +63,13 @@ public class ProfileActivity extends AppCompatActivity {
                     // TODO: Use the retrieved name and age values in your app
                 }
 
+                changeRole.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Intent intent = new Intent(ProfileActivity.this, AdminHomeActivity.class);
+                        startActivity(intent);
+                    }
+                });
 
                 editButton.setOnClickListener(new View.OnClickListener() {
                     @Override

@@ -24,14 +24,17 @@
         </activity>
         <activity
             android:name=".AdminInquiryDetailActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Inquiry"
+            android:parentActivityName=".AdminInquiryActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".AdminReplyActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Reply">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -39,6 +42,7 @@
         <activity
             android:name=".AdminEditProfile"
             android:exported="false"
+            android:label="Edit Admin Profile"
             android:parentActivityName=".AdminProfileActivity">
             <meta-data
                 android:name="android.app.lib_name"
@@ -82,14 +86,10 @@
         </activity>
         <activity
             android:name=".AdminHomeActivity"
-            android:exported="true"
+            android:exported="false"
             android:label="Admin Home"
-            android:parentActivityName=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -97,14 +97,16 @@
         </activity>
         <activity
             android:name=".ReplyActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Reply">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".FileUploadActivity"
-            android:exported="false">
+            android:exported="false"
+            android:label="Upload Result File">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -130,7 +132,7 @@
         <activity
             android:name=".ProfileActivity"
             android:exported="false"
-            android:label="@string/profile"
+            android:label="My Profile"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
@@ -158,6 +160,12 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/my_app">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
