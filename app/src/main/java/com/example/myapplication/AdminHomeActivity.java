@@ -8,34 +8,46 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class AdminHomeActivity extends AppCompatActivity {
+
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle drawerToggle;
 
-    public void onInquiriesClicked(View view) {
+    public void onCourseRegistrationClicked(View view) {
         // Handle inquiries card click
-        Intent intent = new Intent(this, InquiriesActivity.class);
+        Intent intent = new Intent(this, CourseRegistrationActivity.class);
+        startActivity(intent);
+    }
+    public void onInquiriesMessageClicked(View view) {
+        // Handle inquiries card click
+        Intent intent = new Intent(this, ReplyActivity.class);
         startActivity(intent);
     }
 
 
-    public void onResultsClicked(View view) {
+
+    public void onRequestResultsClicked(View view) {
         // Handle results card click
-        Intent intent = new Intent(this, ResultsActivity.class);
+        Intent intent = new Intent(this, RequestResultsActivity.class);
         startActivity(intent);
     }
 
-    public void onProfileClicked(View view) {
+    public void onAdminProfileClicked(View view) {
         // Handle profile card click
-        Intent intent = new Intent(this, ProfileActivity.class);
+        Intent intent = new Intent(this, AdminProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void onAdminInquiriesClicked(View view) {
+        // Handle profile card click
+        Intent intent = new Intent(this, AdminInquiryActivity.class);
         startActivity(intent);
     }
 
@@ -50,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_admin_home);
 
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
@@ -61,43 +73,34 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
+                switch (item.getItemId())
+                {
                     case R.id.home:
-                        Toast.makeText(MainActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "Home selected", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.contact:
-                        Toast.makeText(MainActivity.this, "Contact selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "Contact selected", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.settings:
-                        Toast.makeText(MainActivity.this, "Settings selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "Settings selected", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.about:
-                        Toast.makeText(MainActivity.this, "About selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "About selected", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.logout:
-
-                        startAdminHomeActivity();
+                        Toast.makeText(AdminHomeActivity.this, "Logout selected", Toast.LENGTH_SHORT).show();
                         break;
-
-                    // Toast.makeText(MainActivity.this, "Logout selected", Toast.LENGTH_SHORT).show();
-
                     case R.id.share:
-                        Toast.makeText(MainActivity.this, "Share selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "Share selected", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.rate_us:
-                        Toast.makeText(MainActivity.this, "Rate us selected", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminHomeActivity.this, "Rate us selected", Toast.LENGTH_SHORT).show();
                         break;
                 }
-                drawerLayout.closeDrawer(GravityCompat.START); // Close the drawer after item selection
-                return true; // Mark the item as selected
+                return false;
             }
         });
     }
-    private void startAdminHomeActivity() {
-        Intent intent = new Intent(this, AdminHomeActivity.class);
-        startActivity(intent);
-    }
-
 
     @Override
     public void onBackPressed() {

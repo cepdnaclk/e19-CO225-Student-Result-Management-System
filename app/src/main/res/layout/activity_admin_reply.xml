@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReplyActivity">
+    tools:context=".AdminReplyActivity">
 
     <TextView
         android:id="@+id/adminTitleTextView"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/titleEditText"
+        android:id="@+id/adminTitleEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -34,7 +34,7 @@
         android:layout_margin="16dp"
         android:text="Message"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
+        app:layout_constraintTop_toBottomOf="@+id/adminTitleEditText" />
 
     <EditText
         android:id="@+id/adminMessageEditText"
@@ -58,7 +58,7 @@
         android:elevation="10dp"
         app:cardCornerRadius="20dp"
         android:clickable="true"
-        android:onClick="onSendButtonClicked"
+        android:onClick="onAdminSendButtonClicked"
         app:cardBackgroundColor="@color/dark_midnight_blue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

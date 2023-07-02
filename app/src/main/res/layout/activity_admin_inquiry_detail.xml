@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InquiryDetailsActivity">
+    tools:context=".AdminInquiryDetailActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,59 +51,12 @@
             android:layout_margin="20dp"
             android:orientation="horizontal">
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/upload"
-                    android:layout_width="wrap_content"
-
-
-                    android:layout_height="50dp"
-                    android:layout_marginVertical="10dp"
-                    android:elevation="10dp"
-                    app:cardCornerRadius="20dp"
-                    android:clickable="true"
-                    android:onClick="onInquiriesClicked"
-                    app:cardBackgroundColor="@color/dark_midnight_blue">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <ImageView
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"
-                            android:layout_margin="10dp"
-                            android:src="@drawable/ic_baseline_chevron_right_24"
-                            app:tint="@color/white" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/outfitregular"
-                            android:layout_marginRight="10dp"
-                            android:text="Upload"
-                            android:textSize="16sp"
-                            android:textColor="@android:color/white"
-                            android:gravity="center_vertical" />
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-            </RelativeLayout>
 
             <RelativeLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
-                android:layout_weight="1">
+                android:gravity="center">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/reply"
@@ -113,7 +66,7 @@
                     android:elevation="10dp"
                     app:cardCornerRadius="20dp"
                     android:clickable="true"
-                    android:onClick="onInquiriesClicked"
+                    android:onClick="adminReplyActivity"
                     app:cardBackgroundColor="@color/dark_midnight_blue">
 
                     <LinearLayout

@@ -3,9 +3,8 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.EditText;
-
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -14,7 +13,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ReplyActivity extends AppCompatActivity {
+public class RequestResultsActivity extends AppCompatActivity {
 
     private EditText messageTitle;
     private EditText messageBody;
@@ -26,13 +25,14 @@ public class ReplyActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_reply);
+        setContentView(R.layout.activity_request_results);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         messageTitle = findViewById(R.id.titleEditText);
         messageBody = findViewById(R.id.adminMessageEditText);
 
-        messagesRef = FirebaseDatabase.getInstance().getReference("Field_Administrator/fa1/messages");
-        coordinatorRef = FirebaseDatabase.getInstance().getReference("Course_Coordinator/cc1/name");
+        messagesRef = FirebaseDatabase.getInstance().getReference("Course_Coordinator/cc1/inquiries");
+        coordinatorRef = FirebaseDatabase.getInstance().getReference("Field_Administrator/fa1/name");
 
         coordinatorRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -67,13 +67,13 @@ public class ReplyActivity extends AppCompatActivity {
         messagesRef.child(messageId).setValue(message)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        Toast.makeText(ReplyActivity.this, "Reply sent successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RequestResultsActivity.this, "Request sent successfully", Toast.LENGTH_SHORT).show();
                         // Clear the input fields
                         messageTitle.setText("");
                         messageBody.setText("");
                         finish();
                     } else {
-                        Toast.makeText(ReplyActivity.this, "Failed to reply, try again later", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RequestResultsActivity.this, "Failed to send", Toast.LENGTH_SHORT).show();
                     }
                 });
     }

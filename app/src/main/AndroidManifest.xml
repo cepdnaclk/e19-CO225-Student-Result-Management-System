@@ -16,6 +16,86 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".AdminInquiryAdapter"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminInquiryDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminReplyActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminEditProfile"
+            android:exported="false"
+            android:parentActivityName=".AdminProfileActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminProfileActivity"
+            android:exported="false"
+            android:label="Admin Profile"
+            android:parentActivityName=".AdminHomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RequestResultsActivity"
+            android:exported="false"
+            android:label="Request Results"
+            android:parentActivityName=".AdminHomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".CourseRegistrationActivity"
+            android:exported="false"
+            android:label="Course Registration"
+            android:parentActivityName=".AdminHomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminInquiryActivity"
+            android:exported="false"
+            android:label="Inquiries"
+            android:parentActivityName=".AdminHomeActivity">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AdminHomeActivity"
+            android:exported="true"
+            android:label="Admin Home"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".ReplyActivity"
             android:exported="false">
             <meta-data
@@ -78,12 +158,6 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/my_app">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
