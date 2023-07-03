@@ -9,7 +9,7 @@ title:
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-# Student Result Management System
+## **Student Result Management System**
 
 ---
 
