@@ -24,5 +24,4 @@ Key Features
 Conclusion
 -----------
 
-The Undergraduate Student Marks Management and Analysis System provides a comprehensive solution for managing and analysing undergraduate students' marks. It empowers students to track their academic progress, calculate GPA, set goals, and make informed decisions about their education. The system also streamlines the process of uploading final grades and ensures accuracy and transparency in the evaluation process.
-
+The Undergraduate Student Marks Management and Analysis System offers a comprehensive solution for the management and analysis of undergraduate students' marks. It enables students to effectively monitor their academic progress, calculate their GPA, establish goals, and make informed decisions regarding their education. Additionally, the system simplifies the procedure for uploading final grades, ensuring precision and transparency in the evaluation process.
