@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="15dp"
-        android:layout_marginHorizontal="15dp"
+        android:layout_marginHorizontal="8dp"
         android:gravity="center_vertical"
         android:background="@drawable/rounded_bordered_header"
         android:paddingVertical="6dp"
@@ -59,31 +59,34 @@
         android:background="@color/red"
         android:layout_below="@+id/HeaderLayout"
         android:layout_marginTop="2dp"
-        android:layout_marginHorizontal="15dp"/>
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginBottom="15dp"/>
 
-    <GridLayout
-        android:id="@+id/gridBody"
-        android:layout_below="@+id/h_ruler"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/bodyLayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginVertical="10dp"
-        android:columnCount="2">
+        android:layout_marginHorizontal="8dp"
+        android:layout_centerVertical="true">
 
         <!-- Profile -->
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:id="@+id/profileLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/rounded_border_tiles">
 
             <ImageButton
                 android:id="@+id/profileButton"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/profile" />
+                android:src="@mipmap/profile"
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,43 +95,89 @@
                 android:layout_centerHorizontal="true"
                 android:textSize="22dp"
                 android:text="Profile"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
 
         </RelativeLayout>
 
-        <!-- Result -->
+        <!-- Add Grades -->
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/grid">
+            android:id="@+id/AddGrades"
+            android:layout_below="@+id/profileLayout"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rounded_border_tiles"
+            android:layout_marginBottom="10dp">
 
             <ImageButton
                 android:id="@+id/resultButton"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:layout_margin="20dp"
+                android:layout_margin="10dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/result" />
+                android:src="@mipmap/result"
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/resultButton"
                 android:layout_centerHorizontal="true"
-                android:text="Result"
+                android:text="Add Grades"
                 android:textSize="22dp"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
         </RelativeLayout>
 
-        <!-- Quiz -->
+        <!-- Show Grades -->
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ShowGrades"
+            android:layout_below="@+id/AddGrades"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rounded_border_tiles"
+            android:layout_marginBottom="10dp">
 
             <ImageButton
-                android:id="@+id/quizButton"
+                android:id="@+id/ShowresultButton"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/result"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ShowresultButton"
+                android:layout_centerHorizontal="true"
+                android:text="Show Grades"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
+        </RelativeLayout>
+
+
+        <!-- GPA Calculator. -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gpaTrackerLayout"
+            android:layout_below="@+id/ShowGrades"
+            android:gravity="center_horizontal"
+            android:background="@drawable/rounded_border_tiles"
+            android:layout_marginBottom="10dp">
+
+            <ImageButton
+                android:id="@+id/gpaImgButton"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 android:layout_marginStart="20dp"
@@ -137,125 +186,29 @@
                 android:layout_marginBottom="20dp"
                 android:background="@android:color/transparent"
                 android:scaleType="fitCenter"
-                android:src="@mipmap/quiz" />
+                android:src="@mipmap/gpa"
+                android:layout_centerHorizontal="true"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/quizButton"
+                android:layout_below="@id/gpaImgButton"
                 android:layout_centerHorizontal="true"
-                android:text="Quiz"
+                android:text="GPA Target Tracker"
                 android:textSize="22dp"
-                android:textStyle="bold"/>
-
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginBottom="5dp"/>
         </RelativeLayout>
 
-        <!-- Project -->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <ImageButton
-                android:id="@+id/projectButton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="20dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/project" />
+    </RelativeLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/projectButton"
-                android:layout_centerHorizontal="true"
-                android:text="Project"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
-
-        </RelativeLayout>
-
-        <!-- Assignment -->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/assignmentButton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="20dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/assignment" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/assignmentButton"
-                android:layout_centerHorizontal="true"
-                android:text="Assignment"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
-
-        </RelativeLayout>
-
-        <!-- Notice -->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/noticeButton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="20dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/notice" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/noticeButton"
-                android:layout_centerHorizontal="true"
-                android:text="Notice"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
-
-        </RelativeLayout>
-
-        <!-- Calendar -->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <ImageButton
-                android:id="@+id/calendarButton"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_margin="20dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitCenter"
-                android:src="@mipmap/calender" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/calendarButton"
-                android:layout_centerHorizontal="true"
-                android:text="Calendar"
-                android:textSize="22dp"
-                android:textStyle="bold"/>
-
-        </RelativeLayout>
-
-    </GridLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/gridBody">
+        android:layout_below="@+id/bodyLayout">
         <LinearLayout
             android:id="@+id/FooterLayout"
             android:layout_width="match_parent"
