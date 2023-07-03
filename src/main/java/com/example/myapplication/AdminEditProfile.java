@@ -76,5 +76,5 @@ public class AdminEditProfile extends AppCompatActivity {
         Toast.makeText(this, "Profile saved successfully", Toast.LENGTH_SHORT).show();
         // Finish the activity and return to the ProfileActivity
         finish();
-    }
+        }
     }
