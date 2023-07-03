@@ -21,8 +21,13 @@ This is a sample image, to show how to add images to your page. To learn more op
 
 ## Team
 -  E/19/105, FAHMAN M.H.M., e19105@eng.pdn.ac.lk
--  eNumber, Name, [email](mailto:name@email.com)
--  eNumber, Name, [email](mailto:name@email.com)
+-  E/19/106, Faseeh, e19106@eng.pdn.ac.lk
+-  E/19/244, Hamshica Mohanathas, e19244@eng.pdn.ac.lk
+-  E/19/247, Musthak, e19247@eng.pdn.ac.lk
+-  E/19/210, Jaliya Kumarasir, e19210@eng.pdn.ac.lk
+-  E/19/224, Sandamini Madhurasinghe, e19224@eng.pdn.ac.lk
+-  E/19/249, Sayumi Muthukumarana, e19249@eng.pdn.ac.lk
+-  E/19/278, Tharudi Perera, e19278@eng.pdn.ac.lk
 
 ## Table of Contents
 1. [Introduction](#introduction)
