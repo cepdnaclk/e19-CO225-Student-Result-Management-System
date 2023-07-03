@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestResultsActivity">
+
+    <TextView
+        android:id="@+id/adminTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="> Title"
+        android:textColor="@color/black"
+        android:fontFamily="@font/outfitregular"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/outfitregular"
+        android:hint="Enter the title"
+        app:layout_constraintTop_toBottomOf="@+id/adminTitleTextView" />
+
+    <TextView
+        android:id="@+id/adminMessageTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/outfitregular"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:text="> Message"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/titleEditText" />
+
+    <EditText
+        android:id="@+id/adminMessageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/outfitregular"
+        android:layout_marginEnd="16dp"
+        android:gravity="start|top"
+        android:hint="Enter the message"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/sendButton"
+        app:layout_constraintTop_toBottomOf="@+id/adminMessageTextView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sendButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:onClick="onSendButtonClicked"
+        app:cardBackgroundColor="@color/dark_midnight_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminMessageEditText"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_send_24"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/outfitregular"
+                android:text="Send"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

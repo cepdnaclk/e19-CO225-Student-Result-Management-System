@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".AdminEditProfile"
+android:orientation="vertical"
+android:paddingTop="10dp"
+android:layout_margin="20dp">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/outfitregular"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/adminName"
+    android:text="Your name:"/>
+
+<EditText
+    android:id="@+id/adminNameEditText"
+    android:fontFamily="@font/outfitregular"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="20dp"
+    android:layout_height="wrap_content"/>
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/outfitregular"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/adminNameEditText"
+    android:text="Your batch:"/>
+<EditText
+    android:id="@+id/adminBatchEditText"
+    android:fontFamily="@font/outfitregular"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/outfitregular"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/adminBatchEditText"
+    android:text="Your field:"/>
+<EditText
+    android:id="@+id/adminFieldEditText"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+
+
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/outfitregular"
+    android:layout_height="wrap_content"
+    android:text="Your registration number:"/>
+<EditText
+    android:id="@+id/adminRegistrationNumberEditText"
+    android:fontFamily="@font/outfitregular"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:fontFamily="@font/outfitregular"
+    android:layout_height="wrap_content"
+    android:text="Your id:"/>
+<EditText
+    android:id="@+id/adminIdEditText"
+    android:fontFamily="@font/outfitregular"
+    android:layout_marginBottom="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
+
+<RelativeLayout
+    android:layout_below="@+id/Texts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/adminSaveButton"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginVertical="10dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:clickable="true"
+        android:onClick="onInquiriesClicked"
+        app:cardBackgroundColor="@color/dark_midnight_blue">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+
+
+                android:src="@drawable/ic_baseline_chevron_right_24"
+
+                app:tint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/outfitregular"
+                    android:text="Save"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center_vertical" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+
+</LinearLayout>
