@@ -29,6 +29,13 @@ Key Features
 
 7. Rank Display: Based on the confirmed marks entered by students, the system provides the rank of each student within their batch and field.
 
+Team Work
+-----------
+As team of 8 people, we were able to divide the app into two parts to complete the requirements. The activities done by each teams are provided below:
+
+Group 13 : Managed to complete the student side app implementation, where there is a signup and login page and there is a userinterface for the student to get the grades, to calculate the expected GPA, to see the personal details, to insert some additional details if wanted and to add the finalized grades.
+
+Group 15 : Managed to complete the administrator and course coordinator side app implementations, where the administrator will register for courses, can request from the course grades from the course coordinator and also he/she can view their personal details. Next, the course cooridinator can upload the results, also can view their details. Moreover, there is an inquiry page to request about important events.
 
 Conclusion
 -----------
