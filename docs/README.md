@@ -34,11 +34,9 @@ This is a sample image, to show how to add images to your page. To learn more op
 2. [Other Sub Topics](#other-sub-topics)
 3. [Links](#links)
 
----
-
 ## Introduction
 
- The absence of a student results management system in a university can lead to several real-world problems:
+The absence of a student results management system in a university can lead to several real-world problems:
 1. Data disorganization and difficulty in retrieving information.
 2. Inefficient workflow and increased administrative workload.
 3. Lack of transparency for students to access their results.
@@ -49,8 +47,6 @@ This is a sample image, to show how to add images to your page. To learn more op
 Implementing a student results management system addresses these issues and brings efficiency, transparency, data organization, analytical capabilities, and improved security to the university.
 
 ## Other Sub Topics
-
-.....
 
 ## Links
 
