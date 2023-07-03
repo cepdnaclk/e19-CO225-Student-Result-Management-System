@@ -73,7 +73,6 @@ public class loginActivity extends AppCompatActivity {
                                         Intent intent = new Intent(loginActivity.this, StudentHomeActivity.class);
                                         intent.putExtra("StudentID", username);
                                         startActivity(intent);
-                                        finish();
                                     } else {
                                         // Authentication failed
                                         Toast.makeText(loginActivity.this, "invalid username or password.", Toast.LENGTH_SHORT).show();
