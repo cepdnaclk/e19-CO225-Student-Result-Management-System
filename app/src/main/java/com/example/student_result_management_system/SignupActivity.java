@@ -11,12 +11,19 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class SignupActivity extends AppCompatActivity {
     // Defining variable of layout components..
@@ -25,9 +32,6 @@ public class SignupActivity extends AppCompatActivity {
     private EditText confirmPass;
     private ImageButton backNavigator;
     private Button SignupBtn;
-
-    // definition of student object;
-    private Student student;
 
     // definition of database reference;
     private DatabaseReference reff;
@@ -44,23 +48,12 @@ public class SignupActivity extends AppCompatActivity {
         backNavigator = findViewById(R.id.backnav);
         SignupBtn = findViewById(R.id.Signup);
 
-        // creating a student instance..
-        student = new Student();
-
-        // creating the reference of the database, and a child class students.
-        reff = FirebaseDatabase.getInstance().getReference().child("Student");
 
         backNavigator.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // create an Intent to navigate to a desired activity..
-                Intent intent = new Intent(SignupActivity.this, loginActivity.class);
-
-                // Clear the activity stack and start the desired activity as a new task
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
-                // Starting the activity.
-                startActivity(intent);
+                onBackPressed();
+                finish();
             }
         });
 
@@ -74,6 +67,7 @@ public class SignupActivity extends AppCompatActivity {
                 pswd = password.getText().toString();
                 cPswd = confirmPass.getText().toString();
                 email = uName + "@eng.pdn.ac.lk";
+
 
                 if (TextUtils.isEmpty(uName)){
                     Toast.makeText(SignupActivity.this, "Enter the username", Toast.LENGTH_SHORT).show();
@@ -89,27 +83,68 @@ public class SignupActivity extends AppCompatActivity {
                 {
                     Toast.makeText(SignupActivity.this, "Confirmation Password is different", Toast.LENGTH_SHORT).show();
                 }else{
-                    student.setRegNumber(uName);
-                    student.setEmail(email);
-                    student.setPassword(pswd);
 
-                    // Create user in firebase authentication
-                    FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, pswd)
-                                    .addOnCompleteListener(task -> {
-                                        if (task.isSuccessful()){
-                                            // User creation in Firebase Authentication successful
-                                            FirebaseUser user = task.getResult().getUser();
-                                            String userId = user.getUid();
+                    // creating the reference of the database, and a child class students.
+                    reff = FirebaseDatabase.getInstance().getReference().child("Student");
+                    // Perform the database query
+                    Query query = reff.orderByChild("Email(eng)").equalTo(email);
+                    query.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (snapshot.exists()) {
+                                // Email exists in the database
+                                // Perform the desired operations here
 
-                                            // store additional information in the realtime Database.
-                                            reff.child("student: "+uName).setValue(student);
-                                            Toast.makeText(SignupActivity.this, "Sign-up successful!", Toast.LENGTH_SHORT).show();
+                                // Create user in firebase authentication
+                                FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, pswd)
+                                        .addOnCompleteListener(task -> {
+                                            if (task.isSuccessful()){
+                                                // User creation in Firebase Authentication successful
+                                                FirebaseUser user = task.getResult().getUser();
+                                                String userId = user.getUid();
 
-                                        }
-                                        else{
-                                            Toast.makeText(SignupActivity.this, "SignUp failed.!", Toast.LENGTH_SHORT).show();
-                                        }
-                                    });
+                                                // store the password in the specific instance of the db.
+                                                for (DataSnapshot childSnapshot : snapshot.getChildren()) {
+                                                    // Get the reference to the child node
+                                                    DatabaseReference childRef = childSnapshot.getRef();
+
+                                                    // Update the password field with the new value
+                                                    childRef.child("password").setValue(pswd)
+                                                            .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                                @Override
+                                                                public void onSuccess(Void aVoid) {
+                                                                    // Password updated successfully
+                                                                    // Perform any additional operations here
+                                                                    Toast.makeText(SignupActivity.this, "Sign-up successful!", Toast.LENGTH_SHORT).show();
+                                                                }
+                                                            })
+                                                            .addOnFailureListener(new OnFailureListener() {
+                                                                @Override
+                                                                public void onFailure(@NonNull Exception e) {
+                                                                    // Failed to update password
+                                                                    // Handle the error
+                                                                    Toast.makeText(SignupActivity.this, "sign-up failed.", Toast.LENGTH_SHORT).show();
+                                                                }
+                                                            });
+                                                }
+
+                                            }
+                                            else{
+                                                Toast.makeText(SignupActivity.this, "SignUp failed.!", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+                            } else {
+                                // Email does not exist in the database
+                                // Perform other operations here
+                                Toast.makeText(SignupActivity.this, "invalid username", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            // Handle the error
+                        }
+                    });
 
                 }
 
