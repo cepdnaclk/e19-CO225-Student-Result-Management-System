@@ -3,21 +3,15 @@ layout: home
 permalink: index.html
 
 # Please update this with your repository name and title
-repository-name: eYY-XXX-project-template
+repository-name: e19-CO225-Student-Result-Management-System-template
 title:
----
+
 
 [comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
 
-## **Student Result Management System**
+# <u>Student Result Management System<u/>
 
----
-
-<!-- 
-This is a sample image, to show how to add images to your page. To learn more options, please refer [this](https://projects.ce.pdn.ac.lk/docs/faq/how-to-add-an-image/)
-
-![Sample Image](./images/sample.png)
- -->
+![Banner](https://github.com/sanhaz25/Test01/blob/main/Unleash%20Your%20Potential%2C%20Embrace%20Achievements%20with.png)
 
 ## Team
 -  E/19/105, FAHMAN M.H.M., e19105@eng.pdn.ac.lk
