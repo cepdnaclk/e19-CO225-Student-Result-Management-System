@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddEmail"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/HeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/profileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add personal mail"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/backNavigator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/blue"/>
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/HeaderLayout"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        >
+
+        <TextView
+            android:id="@+id/mailLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerInParent="true"
+            android:text="Add Email: "
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="add your personal mail here."
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/mailLabel"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/body"
+        android:backgroundTint="@color/dark_blue"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

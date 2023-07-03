@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".gpaCalculatorActivity"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/HeaderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue">
+
+        <TextView
+            android:id="@+id/profileView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GPA Target Tracker"
+            android:layout_margin="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="30dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/backNavigator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/blue"/>
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_below="@+id/HeaderLayout"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        >
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+        <TextView
+            android:id="@+id/cgpaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your CGPA: "
+            android:textSize="20dp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/cgpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/cgpaLabel"
+            android:textSize="20dp"
+            android:textColor="@color/red"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/targetGpaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_centerInParent="true"
+            android:text="Target CGPA: "
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
+
+        <EditText
+            android:id="@+id/targetgpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="add your target cgpa here"
+            android:textColor="@color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/targetGpaLabel"
+            android:gravity="center"/>
+
+        <Button
+            android:id="@+id/CalculateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CALCULATE"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_below="@+id/targetgpa"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/h_ruler"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        android:layout_below="@id/body"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/wantedGpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:layout_below="@id/h_ruler"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="5dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/red"/>
+
+</RelativeLayout>
