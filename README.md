@@ -12,7 +12,7 @@ The absence of a student results management system in a university can lead to s
 5. Limited support for decision-making processes.
 6. Security and privacy risks associated with manual handling of records.
 
-   Therefore this system includes easy course registration, seamless uploading of final grades by course coordinators, and student input for courses without uploaded results. The app calculates necessary grades for upcoming semesters and offers a ranking system based on student performance within their batch and field.
+Therefore this system includes easy course registration, seamless uploading of final grades by course coordinators, and student input for courses without uploaded results. The app calculates necessary grades for upcoming semesters and offers a ranking system based on student performance within their batch and field.
 
 Key Features
 ------------
@@ -35,9 +35,9 @@ Team Work
 -----------
 As team of 8 people, we were able to divide the app into two parts to complete the requirements. The activities done by each teams are provided below:
 
-Group 13 : Managed to complete the student side app implementation, where there is a signup and login page and there is a userinterface for the student to get the grades, to calculate the expected GPA, to see the personal details, to insert some additional details if wanted and to add the finalized grades.
+<> Group 13 : Managed to complete the student side app implementation, where there is a signup and login page and there is a userinterface for the student to get the grades, to calculate the expected GPA, to see the personal details, to insert some additional details if wanted and to add the finalized grades.
 
-Group 15 : Managed to complete the administrator and course coordinator side app implementations, where the administrator will register for courses, can request from the course grades from the course coordinator and also he/she can view their personal details. Next, the course cooridinator can upload the results, also can view their details. Moreover, there is an inquiry page to request about important events.
+<> Group 15 : Managed to complete the administrator and course coordinator side app implementations, where the administrator will register for courses, can request from the course grades from the course coordinator and also he/she can view their personal details. Next, the course cooridinator can upload the results, also can view their details. Moreover, there is an inquiry page to request about important events.
 
 Conclusion
 -----------
