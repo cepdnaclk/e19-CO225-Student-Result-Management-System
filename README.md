@@ -3,6 +3,15 @@ Undergraduate Student Marks Management System
 
 The Undergraduate Student Marks Management and Analysis System is designed to facilitate the management and analysis of undergraduate students' marks. The system primarily targets undergraduate students themselves, allowing them to track their academic performance, calculate GPA, and set goals for future semesters. The system also provides functionality for batch administrators and field administrators to register courses and manage the uploading of final grades.
 
+The absence of a student results management system in a university can lead to several real-world problems:
+
+Data disorganization and difficulty in retrieving information.
+Inefficient workflow and increased administrative workload.
+Lack of transparency for students to access their results.
+Challenges in analyzing and reporting student performance.
+Limited support for decision-making processes.
+Security and privacy risks associated with manual handling of records.
+
 Key Features
 ------------
 
