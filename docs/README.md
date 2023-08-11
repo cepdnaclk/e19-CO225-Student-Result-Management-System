@@ -1,18 +1,3 @@
----
-layout: home
-permalink: index.html
-
-# Please update this with your repository name and title
-repository-name: co225/e19/Student-Result-Management-System
-title: Student Results Management System - Mobile App
----
-
-[comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
-
-# Student Results Management System - Mobile App
-
----
-
 # Student Result Management System
 
 ![Banner](https://github.com/sanhaz25/Test01/blob/main/Unleash%20Your%20Potential%2C%20Embrace%20Achievements%20with.png)
