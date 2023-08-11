@@ -1,7 +1,17 @@
 ---
 layout: home
 permalink: index.html
-repository-name: e19-CO225-Student-Result-Management-System
+
+# Please update this with your repository name and title
+repository-name: co225/e19/Student-Result-Management-System
+title: Student Results Management System - Mobile App
+---
+
+[comment]: # "This is the standard layout for the project, but you can clean this and use your own template"
+
+# Student Results Management System - Mobile App
+
+---
 
 # Student Result Management System
 
